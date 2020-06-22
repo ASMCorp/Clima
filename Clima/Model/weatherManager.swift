@@ -9,31 +9,34 @@
 import UIKit
 import CoreLocation
 
-protocol WeatherManagerDelegate {
-    
-    func didUpdateWeather(weather: WeatherModel)
-    func didFailWithError(error: Error)
-}
 
 struct weatherManager {
+    
+    //creating url
     let mainUrl = "https://api.openweathermap.org/data/2.5/weather?appid=bc6de7d5978bb5e1fa06c310123a38ef&units=metric"
     
     var delegate: WeatherManagerDelegate?
     
+    //this method is called from VC to retrive weather data by cityName
     func getWeather(cityName: String)  {
         let urlS = "\(mainUrl)&q=\(cityName)"
         processRequest(with: urlS)
         
     }
     
+    //pass url to process request
     func getWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
         let urlS = "\(mainUrl)&lat=\(latitude)&lon=\(longitude)"
         processRequest(with: urlS)
     }
     
+    //process url request and invoke parseJSON method to get data
     func processRequest(with urlS: String)  {
+        
         if let url = URL(string: urlS){
+            
             let session = URLSession(configuration: .default)
+            
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil{
                     self.delegate?.didFailWithError(error: error!)
@@ -51,6 +54,7 @@ struct weatherManager {
         }
     }
     
+    //decode json data
     func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do{
@@ -58,8 +62,9 @@ struct weatherManager {
             let cityName = decodedData.name
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
-                
-            let weather = WeatherModel(cityName: cityName, temp: temp, conditionID: id)
+            let weatherDescription = decodedData.weather[0].description
+            
+            let weather = WeatherModel(cityName: cityName, temp: temp, conditionID: id, weatherDescription: weatherDescription)
             return weather
         }
         catch{

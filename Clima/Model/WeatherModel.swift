@@ -12,6 +12,7 @@ struct WeatherModel {
     let cityName: String
     let temp: Double
     let conditionID: Int
+    let weatherDescription: String
     
     var tempString: String{
         return String(Int(temp.rounded()))

@@ -16,12 +16,15 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var cityWeatherDescriptionLabel: UILabel!
     
     var weatherM = weatherManager()
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //permissions
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
@@ -77,6 +80,7 @@ extension WeatherViewController: WeatherManagerDelegate{
         DispatchQueue.main.async {
             self.tempLabel.text = String(weather.tempString)
             self.cityNameLabel.text = weather.cityName
+            self.cityWeatherDescriptionLabel.text = weather.weatherDescription.capitalized
             self.weatherImage.image = UIImage(systemName: weather.conditionName)
         }
         
@@ -88,7 +92,7 @@ extension WeatherViewController: WeatherManagerDelegate{
     }
 }
 
-//MARK: - Current Location Contro;
+//MARK: - Current Location Control
 extension WeatherViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
