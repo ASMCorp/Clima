@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C03EFFD24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C03EFFB24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png */; };
+		8C03EFFE24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C03EFFC24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png */; };
 		8C6B169E2499E60E00A51517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6B169D2499E60E00A51517 /* AppDelegate.swift */; };
 		8C6B16A02499E60E00A51517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6B169F2499E60E00A51517 /* SceneDelegate.swift */; };
 		8C6B16A22499E60E00A51517 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6B16A12499E60E00A51517 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C03EFFB24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png"; sourceTree = "<group>"; };
+		8C03EFFC24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png"; sourceTree = "<group>"; };
 		8C6B169A2499E60E00A51517 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6B169D2499E60E00A51517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C6B169F2499E60E00A51517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C03EFFA24A3C56100654BC6 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				8C03EFFB24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png */,
+				8C03EFFC24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png */,
+			);
+			path = Screenshot;
+			sourceTree = "<group>";
+		};
 		8C6B16912499E60E00A51517 = {
 			isa = PBXGroup;
 			children = (
+				8C03EFFA24A3C56100654BC6 /* Screenshot */,
 				8C6B169C2499E60E00A51517 /* Clima */,
 				8C6B169B2499E60E00A51517 /* Products */,
 			);
@@ -164,6 +178,8 @@
 				8C6B16AA2499E61000A51517 /* LaunchScreen.storyboard in Resources */,
 				8C6B16BB249AD77C00A51517 /* Assets.xcassets in Resources */,
 				8C6B16A52499E60E00A51517 /* Main.storyboard in Resources */,
+				8C03EFFE24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.21.54.png in Resources */,
+				8C03EFFD24A3C57F00654BC6 /* Simulator Screen Shot - iPhone 11 Pro Max - 2020-06-24 at 23.20.53.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
